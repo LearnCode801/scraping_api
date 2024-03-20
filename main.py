@@ -27,7 +27,7 @@ def get_top_related_articles(user_input, df, vectorizer, tfidf_matrix, top_n=1):
     return top_related_articles.to_dict(orient='records')
 
 
-@app.route('/home')
+@app.route('/')
 def wellcome():
     return "Wellcome to the Flask Api of Data Scraping"
 
