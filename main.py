@@ -6,12 +6,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 app = Flask(__name__)
 
-with open('C:/Users/PMLS/Pictures/tfidf_vectorizer.pkl', 'rb') as file:
+with open('/tfidf_vectorizer.pkl', 'rb') as file:
     vectorizer = pickle.load(file)
 
 
 
-df = pd.read_csv("D:/6thSemester/Data Warehousing/Assignemts/Api python/medium.csv",encoding="latin1")
+df = pd.read_csv("/medium.csv",encoding="latin1")
 df=df[['Title','Content','Headings','Author URL','Read Time','Date','Image URL']]
 df.dropna(subset = ['Title'], inplace=True)
 
